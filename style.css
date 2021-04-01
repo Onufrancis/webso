@@ -1,0 +1,519 @@
+/*NAVBAR*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgb(83, 80, 248);
+    border-radius: 3px;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      border-radius: 5px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgb(0, 119, 255);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: rgb(32, 1, 104);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+      float: right;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+
+
+  /*LOGIN*/
+  body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width: 100%;
+	margin: auto;
+	max-width:525px;
+	min-height: 500px;
+	position: relative;
+  top: 0%;
+  left: 8%;
+  height: 100vh;
+}
+
+.f:hover {
+  color: #eee;
+}
+
+.ab-2 {
+    color: #91e6f5;
+}
+
+.t-1 {
+    color: rgba(40,57,101,9);
+    font-size: medium;
+}
+.login-html{
+	width: 90%;
+	height: 96.4%;
+	position: absolute;
+	padding: 90px 70px 50px 70px;
+	background:rgba(55, 0, 253, 0.9);
+  color: white;
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .Log in,
+.login-html .Register,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+    cursor: pointer;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color: white;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.group {
+    color: white;
+}
+.login-form .group{
+	margin-bottom:15px;
+    color: white;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius: 17px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	
+	font-size:12px;
+    color: white;
+}
+
+.login-form .group .button{
+	background:#06d4f0;
+    cursor: pointer;
+    list-style-type: none;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+    cursor: pointer;
+}
+.button {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+
+
+
+
+/*IMAGE IN LOGIN*/
+.bg-img {
+  /* The image used */
+  background-image: url("donald-giannatti-Wj1D-qiOseE-unsplash.jpg");
+  min-height: 600px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*IMAGE*/
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+
+
+
+
+ /*FOOTER*/
+ @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+ body {
+   font-family: Lato, sans-serif;
+ }
+ 
+ footer {
+   width:100vw;
+   position:fixed;
+   bottom:0px;
+   height: 13.5vh;
+ }
+ footer div {
+   background-color:#4478e3;
+   margin: -5px 0px 0px 0px;
+   padding:0px;
+   color: #fff;
+   text-align:center;
+ 
+ }
+ svg {
+   width:100%;
+   
+   
+ }
+ .arrow {
+   stroke-width: .3px;
+   stroke:yellow;
+ }
+ .topball {
+   animation: ball 1.5s ease-in-out;
+   animation-iteration-count:infinite;
+   animation-direction: alternate;
+   animation-delay: 0.3s;
+   cursor:pointer;
+ }
+ 
+ .wave {
+   animation: wave 3s linear;
+   animation-iteration-count:infinite;
+   fill: blue;
+   height: 13vh;
+ }
+ .drop {
+   fill: transparent;
+   animation: drop 5s ease infinite normal;
+   stroke: white;
+   stroke-width:0.5;
+   opacity:.6; 
+   transform: translateY(80%);
+   height: 23vh;
+ }
+ .drop1 {
+   transform-origin: 20px 3px;
+ }
+ .drop2 {
+   animation-delay: 3s;
+   animation-duration:3s;
+   transform-origin: 25px 3px;
+ }
+ .drop3 {
+   animation-delay: -2s;
+   animation-duration:3.4s;
+   transform-origin: 16px 3px;
+ 
+ }
+ 
+ .drop4 {
+   animation-delay: 8s;
+   animation-duration:3s;
+   transform-origin: 45px 3px;
+ }
+ 
+ .drop5 {
+   animation-delay: 5s;
+   animation-duration:3s;
+   transform-origin: 45px 3px;
+ }
+ .drop6 {
+   animation-delay: 3s;
+   animation-duration:3s;
+   transform-origin: 25px 3px;
+   float: right;
+ }
+ .drop7 {
+   animation-delay: 3s;
+   animation-duration:3s;
+   transform-origin: 25px 3px;
+ }
+ .drop8 {
+   animation-delay: 10s;
+   animation-duration:3s;
+   transform-origin: 25px 3px;
+   float: right;
+ }
+ .drop9 {
+   animation-delay: 3s;
+   animation-duration:3s;
+   transform-origin: 29px 3px;
+   float: right;
+ }
+ .drop10 {
+   animation-delay: 1s;
+   animation-duration:7s;
+   transform-origin: 10px 3px;
+ }
+ .drop11 {
+  animation-delay: 10s;
+  animation-duration:3s;
+  transform-origin: 10px 3px;
+}
+.drop12 {
+  animation-delay: 11s;
+  animation-duration:5s;
+  transform-origin: 30px 3px;
+}
+.drop13 {
+  animation-delay: 4s;
+  animation-duration:7s;
+  transform-origin: 10px 3px;
+}
+.drop14 {
+  animation-delay: 5s;
+  animation-duration:4s;
+  transform-origin: 10px 3px;
+}
+.drop15 {
+  animation-delay: 7s;
+  animation-duration:7s;
+  transform-origin: 15px 3px;
+}
+ .gooeff {
+     filter: url(#goo);
+ }
+ #wave2 {
+   animation-duration:5s;
+   animation-direction: reverse;
+   opacity: .6;
+   height: 20vh;
+ }
+ #wave3 {
+   animation-duration: 7s;
+   opacity:.3;
+   height: 20vh;
+ }
+ @keyframes drop {
+   0% {
+     transform: translateY(80%); 
+     opacity:.6; 
+   }
+   80% {
+     transform: translateY(80%); 
+     opacity:.6; 
+   }
+   90% { 
+     transform: translateY(10%) ; 
+     opacity:.6; 
+   }
+   100% { 
+     transform: translateY(0%) scale(1.5);  
+     stroke-width:0.2;
+     opacity:0; 
+   }
+ }
+
+ @keyframes wave {
+   to {transform: translateX(-100%);
+     height: 20vh;}
+ }
+ @keyframes ball {
+   to {transform: translateY(20%);}
+ }
+
+
+ .b {
+   background-color: rgb(0, 225, 255);
+   color: white;
+   border-radius: 5px;
+ }
+
+
+
+
+
+
+
+
+ 
